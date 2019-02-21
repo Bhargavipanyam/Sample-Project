@@ -1,25 +1,20 @@
 package main;
 
-import static org.junit.Assert.*;
-
-import org.junit.Test;
-
-public class TestCase {
-	SampleProject sm;
-	@SuppressWarnings("static-access")
-	@Test
-	public void testHello() {
-		sm = new SampleProject();
-		
-		assertEquals("Hello World!",sm.printHello());
-	}
+public class SampleProject {
 	
-	@SuppressWarnings("static-access")
-	@Test
-	public void testAdd() {
-		sm = new SampleProject();
-		int a = 23+45;
-		assertEquals(a,sm.add(23, 45));
+	public static String PrintHello() {
+		
+		String c="Hello World!";
+		return c;
+		
 	}
 
+	public static int add(int a,int b) {
+		int c=a+b;
+		return c;
+	}
+	public static void main(String args[]) {
+		System.out.println(printHello());
+		System.out.println(add(23,45));
+	}
 }
